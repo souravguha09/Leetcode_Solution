@@ -13,7 +13,6 @@ class Solution {
 public:
     TreeNode* createBinaryTree(vector<vector<int>>& A) {
         unordered_map<int, TreeNode*> nodes;
-         nodes.reserve(A.size() + 1);
         int root = 0;
 
         for (auto& d : A) {
