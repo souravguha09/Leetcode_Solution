@@ -2,10 +2,8 @@ class Solution {
 public:
     int uniqueXorTriplets(vector<int>& nums) {
         int mx = *max_element(nums.begin(), nums.end());
-
-        int lim = 1;
-        while (lim <= mx) lim <<= 1;
-        lim <<= 1;               
+        
+        int lim = 1 << ((int)log2(mx) + 2);             
 
         vector<bool> s1(lim, false);
 
