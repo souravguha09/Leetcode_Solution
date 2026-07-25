@@ -17,11 +17,8 @@ public:
         if (root->val == val)
             return root;
 
-        TreeNode* left = inorder(root->left, val);
-        if (left)
-            return left;
-
-        return inorder(root->right, val);
+        if(root->val>val) return inorder(root->left,val);
+        else return inorder(root->right,val);
     }
 
     TreeNode* searchBST(TreeNode* root, int val) {
