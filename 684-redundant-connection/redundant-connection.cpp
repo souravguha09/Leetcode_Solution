@@ -4,10 +4,10 @@ public:
         unordered_map<int,vector<int>>adj;
          auto isconnected=[&](int u,int v){
             unordered_set<int>vis;
-            stack<int>q;
+            queue<int>q;
             q.push(u);
             while(!q.empty()){
-                int node=q.top();
+                int node=q.front();
                 q.pop();
                 if(vis.count(node)) continue;
                 vis.insert(node);
